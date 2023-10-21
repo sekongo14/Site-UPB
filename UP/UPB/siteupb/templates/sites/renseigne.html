@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Document</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: visible;
+        }
+        iframe{
+            width: 100%;
+            height: 90%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="/static/fiche.pdf" width="800px" height="2100px" type='application/pdf'></iframe>
+        <p>&laquo; <a href="{% url 'index' %}">Revenir a l' Acceuil</a></p>
+        
+</body>
+</html>

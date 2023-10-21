@@ -21,3 +21,7 @@ def contact(request):
 
 def about(request):
     return render(request, 'sites/about.html')
+
+
+def renseigne(request):
+    return render(request, 'sites/renseigne.html')
