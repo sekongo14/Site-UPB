@@ -1,0 +1,35 @@
+<style>
+    form{
+        display: flex;
+        flex-direction: column ;
+        align-items: center;
+        background-color: rgb(132, 132, 237);
+        border-radius: 8px;
+        box-shadow: 2px 2px 4px rgba(1, 1, 1, 0.2);
+        padding: 5px;
+    }
+
+    button{
+        color: orange;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    button:hover{
+        color: #fff;
+        background-color: #000;
+    }
+    
+</style>
+
+
+
+{% for message in messages %}
+<p>{{message}}</p>
+{% endfor %}
+<form method="post">
+    <h1>connexion</h1>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Connecter</button>
+</form>

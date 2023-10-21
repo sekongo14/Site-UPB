@@ -57,7 +57,11 @@
                     </li>
                   </ul>
                 </div>
-                <div class="button-block" data-caption-animate="fadeInUp" data-caption-delay="450" style="width: 244px;"><a class="button button-primary-gradient" href="#"><span>Se connecter</span></a></div>
+                {% if user.is_authenticated %}
+                <div class="button-block" data-caption-animate="fadeInUp" data-caption-delay="450" style="width: 244px;"><a class="button button-primary-gradient" href="{% url 'logout' %}"><span>Deconexion</span></a></div>
+               {% else %}
+               <div class="button-block" data-caption-animate="fadeInUp" data-caption-delay="450" style="width: 244px;"><a class="button button-primary-gradient" href="{% url 'login' %}"><span>Connexion</span></a></div>
+               {% endif %}
               </div>  
             </div>
           </nav>

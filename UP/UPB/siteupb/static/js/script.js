@@ -27,7 +27,7 @@
 			progressLinear: $(".progress-linear"),
 			preloader: $(".preloader"),
 			rdNavbar: $(".rd-navbar"),
-			rdMailForm: $(".rd-mailform"),
+			// rdMailForm: $(".rd-mailform"),
 			rdInputLabel: $(".form-label"),
 			regula: $("[data-constraints]"),
 			swiper: $(".swiper-container"),
@@ -37,7 +37,7 @@
 			viewAnimate: $('.view-animate'),
 			wow: $(".wow"),
 			maps: $(".google-map-container"),
-			twitterfeed: $(".twitter"),
+			// twitterfeed: $(".twitter"),
 		};
 
 	// Initialize scripts that require a loaded page
@@ -311,6 +311,8 @@
 		 * @desc Attach form validation to elements
 		 * @param {object} elements - jQuery object
 		 */
+
+		// revoir
 		function attachFormValidator(elements) {
 			// Custom validator - phone number
 			regula.custom({
@@ -333,7 +335,7 @@
 				var $this = $(this), results;
 
 				if (e.type !== "blur") if (!$this.parent().hasClass("has-error")) return;
-				if ($this.parents('.rd-mailform').hasClass('success')) return;
+				// if ($this.parents('.rd-mailform').hasClass('success')) return;
 
 				if ((results = $this.regula('validate')).length) {
 					for (i = 0; i < results.length; i++) {
@@ -373,6 +375,8 @@
 				});
 			}
 		}
+		// fin revoir
+
 
 		/**
 		 * @desc Check if all elements pass validation
@@ -525,8 +529,8 @@
       var key;
 
       for (var i = 0; i < plugins.maps.length; i++) {
-        if (plugins.maps[i].hasAttribute("data-key")) {
-          key = plugins.maps[i].getAttribute("data-key");
+        if (plugins.maps[i].hasAttribute("AIzaSyCRa_M0YPYoR-ET5-giH5NoJvaExVtErrw")) {
+          key = plugins.maps[i].getAttribute("AIzaSyCRa_M0YPYoR-ET5-giH5NoJvaExVtErrw");
           break;
         }
       }
@@ -954,17 +958,19 @@
 			}, pageTransitionDuration);
 		}
 
+		// A revoir
+
 		// RD Input Label
 		if (plugins.rdInputLabel.length) {
 			plugins.rdInputLabel.RDInputLabel();
 		}
 
-		// Regula
+		Regula
 		if (plugins.regula.length) {
 			attachFormValidator(plugins.regula);
 		}
 
-		// RD Mailform
+		//RD Mailform
 		if (plugins.rdMailForm.length) {
 			var i, j, k,
 				msg = {
@@ -1112,6 +1118,8 @@
 				});
 			}
 		}
+
+		//  Fin a revoir
 
 		// lightGallery
 		if (plugins.lightGallery.length) {
