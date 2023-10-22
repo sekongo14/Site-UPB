@@ -1,34 +1,479 @@
 {% load static %}
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Contacts</title>
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="{% static 'images/logo-upb.png' %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700%7CZilla+Slab:300,400,500,700,700i%7CGloria+Hallelujah">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Document</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            overflow: visible;
-        }
-        iframe{
-            width: 100%;
-            height: 90%;
-            border: none;
-        }
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <!-- <a class="banner banner-top" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="images/monstroid-2.jpg" alt="" height="0"></a>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div> -->
+    <div class="preloader">
+      <div class="preloader-logo"><a class="brand" href="{% url 'index' %}"><img class="brand-logo-dark" src="{% static 'images/logo-upb.png' %}" alt="" width="105" height="50"/><img class="brand-logo-light" src="{% static 'images/logo-upb1.jpeg' %}" alt="" width="100" height="50"/></a>
+      </div>
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header page-header-1">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <!-- <div class="rd-navbar-brand"><a class="brand" href="{% url 'index' %}"><img class="brand-logo-dark" src="{% static 'images/logo-upb1.png' %}" alt="" width="245" height="50"/><img class="brand-logo-light" src="{% static 'images/logo-upb.png' %}" alt="" width="245" height="50"/></a>
+                  </div> -->
+                  <div class="rd-navbar-brand"><a class="brand" href="index.html"><img class="brand-logo-dark" src="{% static 'images/logo-upb1.jpeg' %}" alt="" width="300px" height="50"/><img class="brand-logo-light" src="{% static 'images/logo-upb1.jpeg' %}" alt="" width="300px" height="50"/></a>
+                  </div>
+                </div>
+                <div class="rd-navbar-nav-wrap">
+                  <!-- RD Navbar Nav		-->
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'index' %}">Acceuil</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'about' %}">A propos</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'renseigne' %}">Renseignement</a>
+                    </li>
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="{% url 'contact' %}">Contacts</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="breadcrumbs-custom">
+          <div class="container breadcrumbs-custom-container">
+            <div class="breadcrumbs-custom-inner context-dark">
+              <div class="breadcrumbs-custom-item">
+                <h6>CRÉONS L'AVENIR ENSEMBLE</h6>
+                <h1 class="breadcrumbs-custom-title">Contacts</h1>
+              </div>
+              <ul class="breadcrumbs-custom-path">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li class="active">Contacts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Mailform-->
+    
+        <main style="display: flex; flex-direction: column;align-items: center; justify-content: center;">
+                <div class="container">
+                    <div class="col"  style="display: flex; flex-direction: column;align-items: center; justify-content: center; padding: 8px;">
+                        <p>Site web : www.upb.ci / Email : infos@upb.ci Tel :05 76 26 19 89/07 69 29 19 65/01 02 96 62 92</p>
+                        <h1 style="font-size: 30px;">FICHE DE RENSEIGNEMENT</h1>
 
-        @media screen and (max-width: 600px) {
-            iframe {
-                width: 100%;
-                height: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <iframe src="/static/fiche.pdf" width="800px" height="2100px" type='application/pdf'></iframe>
-        <p>&laquo; <a href="{% url 'index' %}">Revenir a l' Acceuil</a></p>
-        
-</body>
+                        <div style="display: flex; flex-direction: column;align-items: center; justify-content: center;">
+                            <h4 style="font-size: 25px;"><u>RENTREE UNIVERSITAIRE 2023-2024</u></h4>
+                            <h6 style="font-size: 20px;"><u>Présentation de l’UPB et du système d’enseignement</u></h6>
+                        </div>
+
+                        <div class="p1" style="margin: 10px;">
+                            <p>Les Technologies de l’Information et de la Communication (TIC) ouvrent de nouvelles perspectives aux entreprises et génèrent ainsi de nouveaux besoins qui impactent profondément leur système d'information, voire qui nécessitent leurs refontes. C'est pourquoi l'objectif de l’Université Polytechnique de Bingerville, à travers les filières des sciences et technologies, est de former des cadres capables de s'investir sur des projets d'envergure axés vers les nouvelles technologies. Le système d’enseignement de l’UPB est basé sur le Système LMD (Licence-Master-Doctorat).</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container1">
+                    <h6  style="font-weight: bold;color: black;margin: 5px;"> Nos valeurs</h6>
+                    <p style="color: orange;">Rigueur – Innovation – Leadership</p>
+                    <ul>
+                         Nos atouts
+                        <li>Un corps enseignant constitué de spécialistes en pédagogie et de professionnels réputés dans leurs secteurs d’activités.</li>
+                        <li>Un réseau de partenaire éducatif constitué de plusieurs institutions d’enseignement supérieur européens, nord-américains et africains.</li>
+                        <li>Un réseau d’entreprises locales et internationales partenaires de l’UPB ;</li>
+                        <li>Un centre d’incubation des projets d’entreprenariat des étudiants ;</li>
+                        <li>Un cadre de formation adéquat et équipé qui favorise une formation alliant la théorie et la pratique.</li>
+                    </ul>
+                </div>
+
+                <div class="container2">
+                    <h4  style="font-weight: bold;color: black;margin: 5px;"><u>LES PARCOURS DE FORMATION A L’UPB :</u></h4>
+                    <ul style="margin-left: 4%;">
+                        <li>►<strong>MIAGE </strong>: Méthodes Informatiques Appliquées à la Gestion des Entreprises.</li>
+                        <li>►<strong>ASSRI</strong>: Administration et Sécurité des Systèmes et des Réseaux Informatiques.</li>
+                        <li>►<strong>3EA </strong>: Electronique Energie Electrique Automatique</li>
+                        <li>►<strong> SEA</strong>: Statistique et Economie Appliquée</li>
+                        <li>►<strong>SEG</strong>: Sciences Economiques et de Gestion</li>
+                        <li>►<strong>SJAP</strong>: Sciences Juridiques Administrative et Politique</li>
+                        <li>►<strong>AT </strong>: Agriculture Tropicale</li>
+                        <li>►<strong>E-C</strong>ommerce et Marketing Digital</li>
+                    </ul>
+                </div>
+
+
+                <div class="container3" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 7%;">
+                        <h6 style="font-weight: bold;color: black;margin: 5px;"><u> Détail des parcours de Licence</u></h6>
+                        <p style="color: red;">1-ASSRI (Administration et Sécurité des Systèmes et des Réseaux Informatiques)</p>
+                        <div>
+                            <h6 style="font-weight: bold; color: black; margin: 5px;"><u>Objectifs</u></h6>
+                            <ul>
+                                <li> Former des informaticiens polyvalents ayant intégré dans leur culture et leur pratique, les problèmes de sécurité ;</li>
+                                <li> La sécurité du matériel : énergie, accès, environnement d'utilisation ;</li>
+                                <li> La sécurité des programmes : génie logiciel, tests, développement collaboratif ;</li>
+                                <li> La sécurité des réseaux : architecture matérielle, règles d'accès, communication.</li>
+                            </ul>
+                        </div>
+
+                        <div class="debouche">
+                            <h6 style="font-weight: bold;color: black;margin: 5px;"><u>Débouchés</u></h6>
+                            <ul>
+                                <li> Analyste en cybersécurité</li>
+                                <li> Administrateur système</li>
+                                <li> Administrateur des infrastructures réseau et cloud  Conseiller technique avant-vente  Chargé d’affaires
+                                    en réseaux télécom</li>
+                                <li> Chef de projet en déploiement réseaux (locaux ou internationaux)  Architecte réseaux.</li> 
+                                <li> Analyste programmeur.</li>
+                                <li> Etc.</li>   
+                            </ul>
+                            <p><Strong><u>Condition d’accès :</u></Strong>Être titulaire d’un bac : C, D, E, F2</p>
+                            <p><strong><u>Durée de la formation </u></strong>06 semestres</p>
+                        </div>
+                </div> 
+                <!-- miage -->
+                <div class="container4" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 2%;">
+                    <p style="color: red;">2-MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises.)</p>
+                    <div>
+                        <h6 style="font-weight: bold; color: black; margin: 5px;"><u>Objectifs</u></h6>
+                        <ul>
+                            <li> Former des cadres spécialisés dans l'ingénierie des (SID) des entreprises.</li>
+                            <li> Optimiser le fonctionnement d'une entreprise par les méthodes et TIC.</li>
+                        
+                        </ul>
+                    </div><u></u>
+
+                    <div class="debouche">
+                        <h6 style="font-weight: bold;color: black;margin: 5px;"><u>Débouchés</u></h6>
+                        <ul>
+                            <li> Analyste programmeur</li>
+                            <li> Intégrateur de solution applicatif</li>
+                            <li> Urbaniste des systèmes d'information</li>
+                            <li> Analyste de données</li> 
+                            <li> Chef de projets informatiques<li>
+                            <li> Gestion et administration des PMI/PME. Etc.</li>   
+                        </ul>
+                        <p><Strong><u>Condition d’accès :</u></Strong>Être titulaire d’un bac : C, D, E, F2, G2</p>
+                        <p><strong><u>Durée de la formation </u></strong>06 semestres</p>
+                    </div>
+                </div>
+
+                <!-- fin miage -->
+                <div class="sea" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 7%;">
+                    <p style="color: red;">3- SEA (Statistique et Economie Appliquée)</p>
+                    <div>
+                        <h6 style="font-weight: bold; color: black; margin: 5px;"><u>Objectifs</u></h6>
+                        <ul>
+                            <li> L’objectif de ce parcours est de former des statisticiens-économistes dont les compétences peuvent s'employer dans tous les secteurs de l'économie et de l’industrie. Notamment l’administration, l'industrie, le secteur bancaire, les instituts de sondage, les services ...</li>
+                        </ul>
+                    </div>
+
+                    <div class="debouche">
+                        <h6 style="font-weight: bold;color: black;margin: 5px;"><u>Débouchés</u></h6>
+                        <ul>
+                            <li> Statisticiens</li>
+                            <li> Prévisionnistes</li>
+                            <li> Méthodologue au sein des instituts de sondage, des grandes entreprises, des administrations et des
+                                sociétés de conseil.</li>
+                            <li> Analyste de données (Data Science)</li> 
+                            <li> Economiste<li>  
+                        </ul>
+                        <p><Strong><u>Condition d’accès :</u></Strong>Être titulaire d’un bac : C, D, E, F2, G2</p>
+                        <p><strong><u>Durée de la formation </u></strong>06 semestres</p>
+                    </div>
+                </div>
+
+                <div class="3ea" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 7%;">
+                    <p style="color: red;"> 4-3EA (Electronique Energie Electrique Automatique)</p>
+                    <div>
+                        <h6 style="font-weight: bold; color: black; margin: 5px;"><u>Objectifs</u></h6>
+                        <ul>
+                            <li> Apporter aux étudiants les bases nécessaires à leurs futurs métiers (en électronique, énergie électrique,
+                                automatisme, recherche).</li>
+                        </ul>
+                    </div>
+
+                    <div class="debouche">
+                        <h6 style="font-weight: bold;color: black;margin: 5px;"><u>Débouchés</u></h6>
+                        <ul>
+                            <li> Ingénierie de recherche en instrumentation et traitement du signal (industries aéronautique, automobile, ferroviaire, énergie, santé, génie civile, construction mécanique, construction électrique, etc.)</li>
+                            <li> Technicien d’instrumentation électronique (Clinique, laboratoire)</li>
+                            <li> etc.</li>
+                        </ul>
+                        <p><Strong><u>Condition d’accès :</u></Strong>Être titulaire d’un bac : C, D, E, F2</p>
+                        <p><strong><u>Durée de la formation </u></strong>06 semestres</p>
+                    </div>
+                </div>
+            
+
+                <div class="sjap" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 7%;">
+                    <p style="color: red;"> 5- SJAP (Sciences Juridiques Administrative et Politique)</p>
+                    <div>
+                        <h6 style="font-weight: bold; color: black; margin: 5px;"><u>Objectifs</u></h6>
+                        <ul>
+                            <li> Mettre en œuvre et appliquer les principes juridiques : connaissance du vocabulaire juridique et des institutions, initiation au raisonnement et à la logique juridique, acquisition des méthodes et qualités d’analyses dans le domaine du droit,</li>
+                            <li> Comprendre les mécanismes socioéconomiques,</li>
+                        </ul>
+                    </div>
+
+                    <div class="debouche">
+                        <h6 style="font-weight: bold;color: black;margin: 5px;"><u>Débouchés</u></h6>
+                        <ul>
+                            <li> Professions libérales : Avocat, Notaire, Commissaire-priseur, Huissier de justice</li>
+                            <li> Magistrat (Juge, Procureur),</li>
+                            <li> Mandataire judiciaire en entreprise  Enseignant-Chercheur  etc.</li>
+                        </ul>
+                        <p><Strong><u>Condition d’accès :</u></Strong>Être titulaire d’un bac : A, C, D, E, F2, G1,</p>
+                        <p><strong><u>Durée de la formation </u></strong>06 semestres</p>
+                    </div>
+                </div>
+
+
+                <div class="seg" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 7%;">
+                    <p style="color: red;"> 6- SEG (Sciences Economiques et de Gestion)</p>
+                    <div>
+                        <h6 style="font-weight: bold; color: black; margin: 5px;"><u>Objectifs</u></h6>
+                        <ul>
+                            <li> Comprendre et appréhender la Macroéconomie et la Microéconomie,</li>
+                            <li> Former des étudiants opérationnels dès la fin du cycle de Licence, des cadres en finance comptabilité-
+                                marketing-gestion des ressources humaines-stratégies d’entreprise,  Former des grands chercheurs en économie et gestion d’entreprises, etc.</li>
+                        </ul>
+                    </div>
+
+                    <div class="debouche">
+                        <h6 style="font-weight: bold;color: black;margin: 5px;"><u>Débouchés</u></h6>
+                        <ul>
+                            <li> Analyste financier, économique,</li>
+                            <li> Spécialiste en ingénierie financière,</li>
+                            <li> Cadre bancaire,</li>
+                            <li> Cadre en assurance,</li>
+                            <li> Consultant,</li>
+                            <li> Comptable,</li>
+                            <li> Gestionnaire d’entreprise.</li>
+                        </ul>
+                        <p><Strong><u>Condition d’accès :</u></Strong>Être titulaire d’un bac : A, C, D, E, F, G2,</p>
+                        <p><strong><u>Durée de la formation </u></strong>06 semestres</p>
+                    </div>
+                </div>
+
+                <div class="AT" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 7%;">
+                    <p style="color: red;"> 7- A.T (Agriculture Tropicale)</p>
+                    <div>
+                        <h6 style="font-weight: bold; color: black; margin: 5px;"><u>Objectifs</u></h6>
+                        <ul>
+                            <li> Les techniques agricoles ont beaucoup évolué ces deux dernières décennies vu les contraintes d’espace, de qualité, de gestion de l’environnement et du développement durable. Le bénéficiaire de cette formation sera un professionnel capable de concevoir l’implantation d’un élevage, gérer une ferme de production animale, conseiller les éleveurs, fabriquer des aliments pour les animaux, faire une analyse technique et économique d’un projet de production animale ou végétale.</li>
+                        </ul>
+                    </div>
+
+                    <div class="debouche">
+                        <h6 style="font-weight: bold;color: black;margin: 5px;"><u>Débouchés</u></h6>
+                        <ul>
+                            <li> Agrochimiste,</li>
+                            <li> Contrôleur des produits phytosanitaires,,</li>
+                            <li> Conseiller agricole,</li>
+                            <li> Responsable de production dans les organismes para agricoles (GVC, Institut de recherche (CNRA)
+                                Chambre d’agriculture),  etc.</li>
+                        </ul>
+                        <p><Strong><u>Condition d’accès :</u></Strong>Être titulaire d’un bac : A, C, D, E, F, G2,</p>
+                        <p><strong><u>Durée de la formation </u></strong>06 semestres</p>
+                    </div>
+                </div>
+
+                <div class="ec" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 7%;">
+                    <p style="color: red;"> 8- E-Commerce et Marketing Digital</p>
+                    <div>
+                        <h6 style="font-weight: bold; color: black; margin: 5px;"><u>Objectifs</u></h6>
+                        <ul>
+                            <li>if
+                                 Renforcer la stratégie de fidélisation pour capter de nouveaux clients ou pour optimiser sa capacité à transformer, le Marketing digital retrouve sa place prépondérante et surtout centrale, conciliant les objectifs du service commercial avec les exigences du service communication.</li>
+                        </ul>
+                    </div>
+
+                    <div class="debouche">
+                        <h6 style="font-weight: bold;color: black;margin: 5px;"><u>Débouchés</u></h6>
+                        <ul>
+                            <li> Responsable de la stratégie digitale,li>
+                            <li> Marketing business Analyste,</li>
+                            <li> Responsable marketing opérationnel digital,</li>
+                            <li> Responsable trafic,</li>
+                            <li> Web marketeur,</li>
+                            <li> Social media manager,</li>
+                            <li> Community manager,</li>
+                            <li> Data manager.</li>
+                        </ul>
+                        <p><Strong><u>Condition d’accès :</u></Strong>Être titulaire d’un bac : A, C, D, E, F, G2,</p>
+                        <p><strong><u>Durée de la formation </u></strong>06 semestres</p>
+                    </div>
+                </div>
+
+                <!-- enseignant -->
+
+                <div class="enseignant" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px;" >
+                    <h6 style="color: blue;"><u>LE CORPS ENSEIGNANT</u></h6>
+                    <div class="enseign" style="padding: 5%;" >
+                        <p style="text-align: justify;">Le corps Enseignant de l'UPB est composé de docteurs, d’enseignants chercheurs de nos universités nationales, 
+                            d'ingénieurs issus du monde professionnel et des grandes sociétés de technologies au plan national et international. Egalement, des chercheurs de grands laboratoires de technologie
+                            à travers le monde. Chacun de nos enseignants a au minimum le niveau ingénieur. L’UPB est la seule université privée ivoirienne spécialisée dans les technologies du futur et pour ce
+                            faire, les enseignants constituent pour nous la ressource essentielle. Nous avons l'ambition de former les cadres de demain, afin de répondre aux besoins sans cesse croissant des entreprises 
+                            ivoiriennes et internationales ; des professionnels qualifiés en Data science, en intelligence artificielle en lot, en Biotechnologie, en robotique et dans tous les métiers des sciences informatiques
+                            et de la télécommunication. A cet effet, nos étudiants sont enseignés, accompagnés et coachés par des experts d'horizons divers venus de l'INP-HB, des universités ivoiriennes et étrangères. Docteur 
+                            Tiékoura, Docteur en Informatique, Enseignant-Chercheur à l’ESATIC et à, l’INP- HB est le responsable du département Informatique et Sciences du Numérique.
+                        </p>
+                    </div>    
+                </div>
+                
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px;">
+                    <h6 style="color: blue;"><u>Admission – Dossier d’Inscription</u></h6>
+                    <div style="padding: 5%;">
+                        <p style="text-align: justify;">
+                            4 extraits d’acte de naissance – 4 Copies légalisées du Relevé du BAC 
+                            – 4 Photocopies de la Carte Nationale d’Identité – 4 copie des bulletins 
+                            des trois trimestres de la Tle - Les frais d’inscription (250.000 FCFA) + 
+                            35.000frs (pour achat de blouse + kit technique) pour les étudiants de la filière 3EA.
+                        </p>
+                    </div>         
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px;">
+                    <h6 style="color: blue;"><u>Découpage de l’année académique</u></h6>
+                    <div style="padding: 5%;">
+                        <p style="text-align: justify;">
+                            La rentrée est fixée au Vendredi 1er Septembre 2023 Début des cours : Lundi 11 Septembre 2023
+                            L’année académique, suivant le système LMD est constituée de deux semestres.
+                            Semestre 1 : Du Lundi 11 Septembre 2023 au Mercredi 31 Janvier 2024 Semestre 2 : Du Jeudi 1er Février 2024 au Vendredi 28 Juin 2024
+                        </p>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px;">
+                    <h6><u>Coût et Modalité de paiement des formations</u></h6>
+                    <div>
+                        <p>1. Pour les affectés de l’Etat (FILIERES :MIAGE,ASSRI,SEA,3EA)</p>
+                        <table class="table">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Handle</th>
+                                  </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                  </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+
+            <div>
+            </div>
+        </main>
+
+
+      <!-- Page Footer-->
+      <a class="banner" href="https://www.templatemonster.com/website-templates/monstroid2.html" target="_blank"><img src="images/monstroid-big-2.jpg" alt="" height="0"></a>
+      <footer class="section footer-classic bg-gray-950">
+        <div class="footer-classic-main">
+          <div class="container"> 
+            <div class="row row-30">
+              <div class="col-lg-3">
+                <div class="row row-30 row-xl-40">
+                  <div class="col-6 col-md-3 col-lg-12">
+                    <article class="counter-minimal">
+                      <div class="counter-minimal-counter">
+                        <div class="counter">97</div><span class="counter-postfix">%</span>
+                      </div>
+                      <p class="counter-minimal-title">Graduates</p>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-12">
+                    <article class="counter-minimal">
+                      <div class="counter-minimal-counter">
+                        <div class="counter">30</div><span class="counter-postfix">+</span>
+                      </div>
+                      <p class="counter-minimal-title">Certified Teachers</p>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-12">
+                    <article class="counter-minimal">
+                      <div class="counter-minimal-counter counter">8</div>
+                      <p class="counter-minimal-title">Student Startup</p>
+                    </article>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-12">
+                    <article class="counter-minimal">
+                      <div class="counter-minimal-counter counter">3,500k</div>
+                      <p class="counter-minimal-title">Students</p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <div class="rows">
+                  <div class="col">
+                    <h5>Suivez-Nous</h5>
+                    <p style="padding: 5px;"><i style="color: #fff; margin-right: 5%;" class="fa-brands fa-twitter"></i> <a href="">Twiter</a> </p>
+                    <p style="padding: 5px;"><i style="color: #fff; margin-right: 5%;" class="fa-brands fa-facebook"></i><a href="">Facebook</a></p>
+                    <p style="padding: 5px;"><i style="color: #fff; margin-right: 5%;" class="fa-brands fa-instagram"></i><a href="">Instagrame</a></p>
+                    <p style="padding: 5px;"><i style="color: #fff; margin-right: 5%;" class="fa-brands fa-linkedin"></i><a href="">Linkedin</a></p>
+                  </div>
+              </div>
+              <div class="col" style="margin-left: 10%;">
+                <h5>Liens</h5>
+                <p><a href="{% url 'index' %}">Acceuil</a></p>
+                <p><a href="{% url 'about' %}">A propos</a></p>
+                <p><a href="{% url 'renseigne' %}">Renseignement</a></p>
+                <p><a href="{% url 'contact' %}">Contact</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-classic-aside">
+          <div class="container">
+            <!-- Rights-->
+          <p>copyright <i class="fa-regular fa-copyright"> </i>UPB 2023 tout droit reserver</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="{% static 'js/core.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
 </html>
