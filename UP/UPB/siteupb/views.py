@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .formulaire import MessageForm
+from django.urls import reverse
 
 # Create your views here.
 
@@ -25,3 +26,8 @@ def about(request):
 
 def renseigne(request):
     return render(request, 'sites/renseigne.html')
+
+
+# def admin(request):
+#     admin_url = reverse('admin:index')
+#     return render(request, 'sites/index.html', {'admin_url': admin_url})
